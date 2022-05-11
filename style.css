@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --Cyanv2: hsl(179, 64%, 52%);
+
+  font-size: 62.5%;
+}
+
+/* ######## Geral ######## */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Light-Gray);
+}
+
+.base {
+  padding: 2rem 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  color: var(--Bright-Yellow);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+section, footer {
+  width: min(30.5rem, 100%);
+  margin-inline: auto;
+}
+
+/* ######## Col-a ######## */
+
+.col-a {
+  background-color: white;
+  margin-top: 3rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.col-a h2 {
+  color: var(--Cyan);
+}
+
+.col-a p {
+  color: var(--Grayish-Blue);
+}
+
+/* ######## Col-b ######## */
+
+.col-b {
+  background-color: var(--Cyan);
+}
+
+.col-b h2, p, h1{
+  color: var(--Light-Gray);
+}
+
+.col-b .price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.col-b .price p {
+  color: var(--Grayish-Blue);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: var(--Bright-Yellow);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* ######## Col-c ######## */
+
+.col-c {
+  background-color: var(--Cyanv2);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.col-c h2 {
+  color: var(--Light-Gray);
+}
+
+/* ######## Footer ######## */
+
+footer {
+  padding: .8rem;
+}
+
+footer p {
+  color: initial;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ######## Responsivo ######## */
+
+@media (min-width: 1024px) {
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    max-width: 65rem;
+  }
+
+  section {
+    width: initial;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .grid-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .col-a h2 {
+    font-size: 3rem;
+  }
+
+  .col-b {
+    border-bottom-left-radius: 1rem;
+    padding-inline: 1.4rem;
+  }
+
+  .col-c {
+    border-radius: initial;
+    border-bottom-right-radius: 1rem;
+  }
+
+  footer {
+    width: 100%;
+    text-align: center;
+  }
+}
