@@ -155,6 +155,7 @@ footer a {
 
   section {
     width: initial;
+    margin: initial;
   }
 
   h4 {
@@ -176,7 +177,7 @@ footer a {
 
   .col-b {
     border-bottom-left-radius: 1rem;
-    padding-inline: 1.4rem;
+
   }
 
   .col-c {
